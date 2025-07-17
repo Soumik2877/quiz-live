@@ -1,0 +1,51 @@
+Subordinate css : index.css
+main css : style.css
+style.css version 1 :
+
+.team{
+  width:100%;
+  /*background:#fff;*/
+  background-image: linear-gradient(to left, #000000, #923CB5);
+  border:2px solid #ccc;
+  border-radius:10px;
+  padding:10px 16px;
+  display:flex;           /* ← puts img, name, score, buttons side‑by‑side */
+  align-items:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+/* avatar */
+.team-photo{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid #0077cc;
+  flex-shrink:0;
+}
+
+/* team name */
+.team h2{
+  margin:0 0 0 12px;
+  font-size:20px;
+  flex:0 0 auto;
+}
+
+/* score */
+.score{
+  margin-left:auto;       /* push score + buttons to the right edge group */
+  margin-right:auto;
+  font-size:26px;
+  font-weight:bold;
+  color:#f0f4f8;
+  
+}
+@keyframes bounce{0%{transform:scale(1)}50%{transform:scale(1.4)}100%{transform:scale(1)}}
+.score.animate{animation:bounce .3s ease}
+
+/* button cluster */
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}

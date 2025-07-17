@@ -1,0 +1,88 @@
+/* ----- Global ----- */
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    text-align: center;
+  }
+  h1 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  /* ----- Leaderboard layout ----- */
+  .scoreboard {
+    display: flex;
+    flex-direction: column;   /* vertical list so re‑ordering is obvious */
+    align-items: center;
+    gap: 20px;
+  }
+  
+  
+  /* ----- Team card ----- */
+  .team {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    width: 260px;
+    padding: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+  }
+  .team h2 {
+    margin: 10px 0 8px;
+    font-size: 20px;
+  }
+  .team-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #0077cc;
+    margin-bottom: 8px;
+  }
+  
+  /* ----- Score display ----- */
+  .score {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0077cc;
+    margin-bottom: 12px;
+  }
+  @keyframes bounce {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.4); }
+    100% { transform: scale(1); }
+  }
+  .score.animate {
+    animation: bounce 0.3s ease;
+  }
+  
+  /* ----- Point buttons ----- */
+  .buttons button {
+    margin: 4px;
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #0077cc;
+    color: #fff;
+  }
+  .buttons button:hover {
+    background: #005fa3;
+  }
+  
+  .custom-score-input {
+    width: 70px;
+    margin-top: 5px;
+    margin-right: 4px;
+    padding: 4px;
+    font-size: 13px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+  }
+  
