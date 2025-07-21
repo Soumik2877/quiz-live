@@ -66,19 +66,19 @@ h1{
   /* TEAM NAME container with fixed width */
   .team h2 {
     margin: 0 12px;
-    font-size: 20px;
-    white-space: nowrap;
+    font-size: 26px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 40%;       /* ✅ Fix name width for alignment */
+    width: 40%;
     flex-shrink: 0;
     text-align: left;
-    color:#ffce54;
+    color: #ffffff;
+    padding-right: 25px;
   }
   
   /* SCORE stays fixed and aligned */
   .score {
-    font-size: 26px;
+    font-size: 55px;
     font-weight: bold;
     margin-right: 124px;
     margin-left: -40px;
@@ -88,7 +88,7 @@ h1{
 
   }
   .score {
-    color: #ffe604;                 /* normal blue */
+    color: #ffffff;                 /* normal blue */
     transition: color 0.3s ease;    /* 👈 fade between colours */
   }
 
@@ -106,7 +106,7 @@ h1{
     gap: 6px;
     /* justify-content: flex-start; */
     justify-content: space-between;
-    margin-left: 66px;
+    margin-left: 50px;
   }
 .buttons button{
   padding:9px 12px;

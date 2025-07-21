@@ -3,8 +3,8 @@
    CONFIG & STATE
 --------------------------------- */
 const teams = [
-    "Team A", "Team B", "Team C", "Team D",
-    "Team E", "Team F"
+    "[A] Abhinav Bharati High School", "[B] Silver Point School", "[C]BDM International", "[D] DAV Model, Durgapur",
+    "[E] Starling International", "[F] St. Montfort's Sr. Secondary School"
   ];
   const pointValues = [10, 20, 30];
   const scores = Array(teams.length).fill(0);
@@ -48,10 +48,10 @@ scoreboard.appendChild(backgroundLogo);
       btnWrap.appendChild(b);
     });
   
-    // const resetBtn = document.createElement("button");
-    // resetBtn.textContent = "Reset";
-    // resetBtn.onclick = () => setScore(idx, 0);
-    // btnWrap.appendChild(resetBtn);
+    const resetBtn = document.createElement("button");
+    resetBtn.textContent = "R";
+    resetBtn.onclick = () => setScore(idx, 0);
+    btnWrap.appendChild(resetBtn);
   
     // const minusBtn = document.createElement("button");
     // minusBtn.textContent = "-5";

@@ -1,0 +1,8 @@
+firebase details :
+1. Security Rules:
+{
+  "rules": {
+    ".read": "now < 1755628200000",  // 2025-8-20
+    ".write": "now < 1755628200000",  // 2025-8-20
+  }
+}
