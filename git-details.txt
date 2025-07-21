@@ -1,0 +1,2 @@
+use : git remote set-url origin https://github.com/Soumik2877/quiz-live.git
+to add an exixting file into new repository

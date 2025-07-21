@@ -3,8 +3,8 @@
    CONFIG & STATE
 --------------------------------- */
 const teams = [
-    "[A] Abhinav Bharati High School", "[B] Silver Point School", "[C]BDM International", "[D] DAV Model, Durgapur",
-    "[E] Starling International", "[F] St. Montfort's Sr. Secondary School"
+    "[A]", "[B]", "[C]", "[D]",
+    "[E]", "[F]"
   ];
   const pointValues = [10, 20, 30];
   const scores = Array(teams.length).fill(0);
@@ -53,10 +53,6 @@ scoreboard.appendChild(backgroundLogo);
     resetBtn.onclick = () => setScore(idx, 0);
     btnWrap.appendChild(resetBtn);
   
-    // const minusBtn = document.createElement("button");
-    // minusBtn.textContent = "-5";
-    // minusBtn.onclick = () => changeScore(idx, -5);
-    // btnWrap.appendChild(minusBtn);
 
     const minusValues = [-5, -10, -15];
     minusValues.forEach(m => {
@@ -115,32 +111,6 @@ btnWrap.appendChild(customAddBtn);
     renderScore(teamIdx);
     sortAndAnimate();
   }
-  //version1
-//   function renderScore(teamIdx) {
-//     const el = document.getElementById(`score-${teamIdx}`);
-//     el.textContent = scores[teamIdx];
-//     el.classList.remove("animate");
-//     void el.offsetWidth;      // restart bounce
-//     el.classList.add("animate");
-//   }
-
-//version2
-// function renderScore(teamIdx) {
-//     const el = document.getElementById(`score-${teamIdx}`);
-//     el.textContent = scores[teamIdx];
-  
-//     /* restart bounce for THIS score */
-//     el.classList.remove("animate");
-//     void el.offsetWidth;          // force reflow
-//     el.classList.add("animate");
-  
-//     /* 🔑 remove the class as soon as the bounce ends */
-//     el.addEventListener(
-//       "animationend",
-//       () => el.classList.remove("animate"),
-//       { once: true }
-//     );
-//   }
   
   //version 3
   function renderScore(teamIdx, delta = 0) {

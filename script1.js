@@ -1,4 +1,5 @@
 // Firebase Config (replace with your actual config)
+try{
 const firebaseConfig = {
     apiKey: "AIzaSyDWjHFd-bcPYhPYEh_Kj2Tv-9gJQYStuDs",
     authDomain: "quiz-scorer.firebaseapp.com",
@@ -12,7 +13,10 @@ const firebaseConfig = {
 
   firebase.initializeApp(firebaseConfig);
   const db = firebase.database();
-  
+ console.log("✅ Firebase initialized");
+} catch (error) {
+  console.error("❌ Firebase error:", error);
+}
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
