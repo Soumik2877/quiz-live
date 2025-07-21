@@ -161,6 +161,7 @@ body {
   overflow: hidden;
   background: var(--bg);
   margin: 40px;
+  margin-top: 25px;
 }
 
 .aurora {
@@ -391,3 +392,4 @@ body {
   border: 1px solid #aaa;
   border-radius: 20px;
 }
+
