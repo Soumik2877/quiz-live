@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["[A]", "[B]", "[C]", "[D]", "[E]", "[F]"];
+  const teams = ["[A]", "[B]", "[C]", "[D]", "[E]", "[F]","[G]","[H]"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
@@ -101,7 +101,9 @@ const firebaseConfig = {
      SCORE HANDLERS
   --------------------------------- */
   function changeScore(teamIdx, delta) {
-    scores[teamIdx] = Math.max(0, scores[teamIdx] + delta);
+    scores[teamIdx] += delta;
+    // scores[teamIdx] = Math.max(0, scores[teamIdx] + delta);
+
     renderScore(teamIdx, delta);
   
     const sfx = delta >= 0 ? dingSoundPlus : dingSoundMinus;
@@ -117,15 +119,43 @@ const firebaseConfig = {
   }
   
   function setScore(teamIdx, value) {
-    scores[teamIdx] = Math.max(0, value);
+    // scores[teamIdx] = Math.max(0, value);
+    scores[teamIdx] = value;
     renderScore(teamIdx);
     updateScoresInFirebase();
     sortAndAnimate();
   }
   
-  function renderScore(teamIdx, delta = 0) {
+//   function renderScore(teamIdx, delta = 0) {
+//     const el = document.getElementById(`score-${teamIdx}`);
+//     el.textContent = scores[teamIdx];
+  
+//     el.classList.remove("plus", "minus", "animate");
+  
+//     if (delta > 0) el.classList.add("plus");
+//     if (delta < 0) el.classList.add("minus");
+  
+//     void el.offsetWidth;
+//     el.classList.add("animate");
+  
+//     el.addEventListener(
+//       "animationend",
+//       () => el.classList.remove("plus", "minus", "animate"),
+//       { once: true }
+//     );
+//   }
+
+
+function renderScore(teamIdx) {
     const el = document.getElementById(`score-${teamIdx}`);
-    el.textContent = scores[teamIdx];
+    const prev = parseInt(el.textContent) || 0;
+    const curr = scores[teamIdx];
+    const delta = curr - prev;
+  
+    // 🚫 Don't animate if score hasn't changed
+    if (delta === 0) return;
+  
+    el.textContent = curr;
   
     el.classList.remove("plus", "minus", "animate");
   
@@ -141,6 +171,44 @@ const firebaseConfig = {
       { once: true }
     );
   }
+  
+
+// function renderScore(teamIdx) {
+//     const card = document.querySelectorAll(".team")[teamIdx];
+//     const scoreEl = card.querySelector(".score");
+  
+//     const prev = parseInt(scoreEl.textContent) || 0;
+//     const newScore = scores[teamIdx];
+  
+//     // If score didn’t change, skip
+//     if (prev === newScore) return;
+  
+//     // Clean previous classes
+//     scoreEl.classList.remove("plus", "minus", "animate");
+  
+//     // Update score text
+//     scoreEl.textContent = newScore;
+  
+//     // Apply class based on change
+//     if (newScore > prev) scoreEl.classList.add("plus");
+//     else scoreEl.classList.add("minus");
+  
+//     // Trigger reflow for animation
+//     void scoreEl.offsetWidth;
+  
+//     // Add animation class
+//     scoreEl.classList.add("animate");
+  
+//     // After animation ends, remove all highlight classes
+//     scoreEl.addEventListener(
+//       "animationend",
+//       () => {
+//         scoreEl.classList.remove("plus", "minus", "animate");
+//       },
+//       { once: true }
+//     );
+//   }
+  
   
   /* --------------------------------
      FIREBASE SYNC
@@ -181,7 +249,7 @@ const firebaseConfig = {
         card.style.transition = "none";
         card.style.transform = `translate(${dx}px, ${dy}px)`;
         requestAnimationFrame(() => {
-          card.style.transition = "transform 0.45s cubic-bezier(.25,.8,.25,1)";
+          card.style.transition = "transform 0.95s cubic-bezier(.25,.8,.25,1)";
           card.style.transform = "";
         });
         card.addEventListener("transitionend", () => {

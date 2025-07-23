@@ -32,9 +32,10 @@ h1{
 /* ---------- Leaderboard wrapper ---------- */
 .scoreboard{
   display:flex;           /* vertical stack of teams */
-  flex-direction:column;
+  flex-direction:row;
+  flex-wrap: wrap;
   gap:12px;
-  max-width:1000px;       /* keeps things centred on large screens */
+  max-width:1500px;       /* keeps things centred on large screens */
   margin:40px auto;
 }
 
@@ -42,6 +43,7 @@ h1{
 
 /* version 2 from team to button get version 1 at txt file.*/
 
+/*
 .team {
     display: flex;
     align-items: center;
@@ -52,6 +54,20 @@ h1{
     width: 100%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
+  */
+
+  .team {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    padding: 10px 16px;
+    width: 24%;
+    height: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
   
   /* photo remains unchanged */
   .team-photo {
@@ -65,26 +81,25 @@ h1{
   
   /* TEAM NAME container with fixed width */
   .team h2 {
-    margin: 0 12px;
+    margin: 30px auto;
     font-size: 26px;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 40%;
+    width: 100%;
     flex-shrink: 0;
-    text-align: left;
+    text-align: center;
     color: #ffffff;
-    padding-right: 25px;
+    padding-right: 0px;
   }
   
   /* SCORE stays fixed and aligned */
   .score {
     font-size: 55px;
     font-weight: bold;
-    margin-right: 124px;
-    margin-left: -40px;
+    margin: 12px auto;
     flex-shrink: 0;
     text-align: center;
-    width: 10%;         /* ✅ consistent width across all cards */
+    width: 100%;         /* ✅ consistent width across all cards */
 
   }
   .score {
@@ -106,8 +121,9 @@ h1{
     gap: 6px;
     /* justify-content: flex-start; */
     justify-content: space-between;
-    margin-left: 50px;
+    margin: 31px;
   }
+
 .buttons button{
   padding:9px 12px;
   font-size:14px;
