@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["[A]", "[B]", "[C]", "[D]", "[E]", "[F]","[G]","[H]"];
+  const teams = ["Team [A]", "[B]", "[C]", "[D]", "[E]", "[F]","[G]","[H]"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
