@@ -1,0 +1,14 @@
+.team h2 {
+    margin: auto auto;
+    font-size: 26px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 40%;
+    flex-shrink: 0;
+    text-align: left;
+    color: #ffffff;
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+
