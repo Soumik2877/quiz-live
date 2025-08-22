@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["Team [A]", "[B]", "[C]", "[D]", "[E]", "[F]","[G]","[H]"];
+  const teams = ["Team [A]: Silver Point School, Kolkata", "Team [B]: B.D.M. International, Kolkata ", "Team [C]: Starling International School, N. 24 Pgns ", "Team [D]: St Agnes School, Kharagpur", "Team [E]: Saraswati Devi International School, Bankura", "Team [F]: Julien Day School, Kalyani","Team [G]: St. Xavier's School, Burdwan","Team [H]: St. Mary's Orphanage & Day School, Dumdum"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
