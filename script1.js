@@ -46,9 +46,9 @@ const firebaseConfig = {
     const card = document.createElement("div");
     card.className = "team";
     card.dataset.index = idx;
-  
+    // <img src="photos/teams${idx}.png" alt="${name}" class="team-photo">
     card.innerHTML = `
-      <img src="photos/teams${idx}.png" alt="${name}" class="team-photo">
+     
       <h2>${name}</h2>
       <div class="score" id="score-${idx}">0</div>
       <div class="buttons"></div>
