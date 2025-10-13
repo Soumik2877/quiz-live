@@ -17,7 +17,7 @@ const teams = [
   const dingSoundMinus  = document.getElementById("ding-minus");
   
   const backgroundLogo = document.createElement("img");
-backgroundLogo.src = "nsd-logo.png";
+backgroundLogo.src = "bg-rvm.png";
 backgroundLogo.alt = "Center Logo";
 backgroundLogo.className = "center-background-logo floating";
 scoreboard.appendChild(backgroundLogo);

@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["Team [A]: Silver Point School, Kolkata", "Team [B]: B.D.M. International, Kolkata ", "Team [C]: Starling International School, N. 24 Pgns ", "Team [D]: St Agnes School, Kharagpur", "Team [E]: Saraswati Devi International School, Bankura", "Team [F]: Julien Day School, Kalyani","Team [G]: St. Xavier's School, Burdwan","Team [H]: St. Mary's Orphanage & Day School, Dumdum"];
+  const teams = ["Team [A]", "Team [B]", "Team [C]", "Team [D]", "Team [E]", "Team [F]"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
@@ -34,7 +34,7 @@ const firebaseConfig = {
   
   // Add background logo
   const backgroundLogo = document.createElement("img");
-  backgroundLogo.src = "nsd-logo.png";
+  backgroundLogo.src = "bg-rvm.png";
   backgroundLogo.alt = "Center Logo";
   backgroundLogo.className = "center-background-logo floating";
   scoreboard.appendChild(backgroundLogo);
@@ -48,7 +48,7 @@ const firebaseConfig = {
     card.dataset.index = idx;
   
     card.innerHTML = `
-      <img src="photos/team${idx}.png" alt="${name}" class="team-photo">
+      <img src="photos/teams${idx}.png" alt="${name}" class="team-photo">
       <h2>${name}</h2>
       <div class="score" id="score-${idx}">0</div>
       <div class="buttons"></div>
