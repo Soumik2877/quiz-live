@@ -63,7 +63,7 @@ h1{
     display: flex;
     flex-flow: column;
     align-items: center;
-    background: rgb(0 0 0 / 82%);
+    background: rgba(116, 116, 116, 0.43);
     backdrop-filter: blur(1px);
     border-radius: 10px;
     padding: 25px 16px;
@@ -390,7 +390,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  opacity: 0.2;
+  opacity: 0.8;
   z-index: 0;
   pointer-events: none;
 }

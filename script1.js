@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["Crescent Valley Public School", "Riverbank Horizon Academy", "Skyline Springs International", "Bluehaven Scholars School", "Starlight Crest Academy", "Starlight Crest Academy"];
+  const teams = ["Crescent Valley Public School", "Riverbank Horizon Academy", "Skyline Springs International", "Bluehaven Scholars School", "Starlight Crest Academy", "Saraswati Devi International School"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
@@ -32,12 +32,12 @@ const firebaseConfig = {
   const dingSoundPlus  = document.getElementById("ding-plus");
   const dingSoundMinus = document.getElementById("ding-minus");
   
-  // Add background logo
-  // const backgroundLogo = document.createElement("img");
-  // backgroundLogo.src = "bg-rvm.png";
-  // backgroundLogo.alt = "Center Logo";
-  // backgroundLogo.className = "center-background-logo floating";
-  // scoreboard.appendChild(backgroundLogo);
+  //Add background logo
+  const backgroundLogo = document.createElement("img");
+  backgroundLogo.src = "nsd-logo.png";
+  backgroundLogo.alt = "Center Logo";
+  backgroundLogo.className = "center-background-logo floating";
+  scoreboard.appendChild(backgroundLogo);
   
   /* --------------------------------
      BUILD TEAM ROWS
