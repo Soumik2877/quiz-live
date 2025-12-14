@@ -21,7 +21,7 @@ const firebaseConfig = {
   /* --------------------------------
      CONFIG & STATE
   --------------------------------- */
-  const teams = ["Team [A]", "Team [B]", "Team [C]", "Team [D]", "Team [E]", "Team [F]"];
+  const teams = ["Crescent Valley Public School", "Riverbank Horizon Academy", "Skyline Springs International", "Bluehaven Scholars School", "Starlight Crest Academy", "Starlight Crest Academy"];
   const pointValues = [10, 20, 30];
   let scores = Array(teams.length).fill(0);
   
