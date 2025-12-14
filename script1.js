@@ -33,11 +33,11 @@ const firebaseConfig = {
   const dingSoundMinus = document.getElementById("ding-minus");
   
   // Add background logo
-  const backgroundLogo = document.createElement("img");
-  backgroundLogo.src = "bg-rvm.png";
-  backgroundLogo.alt = "Center Logo";
-  backgroundLogo.className = "center-background-logo floating";
-  scoreboard.appendChild(backgroundLogo);
+  // const backgroundLogo = document.createElement("img");
+  // backgroundLogo.src = "bg-rvm.png";
+  // backgroundLogo.alt = "Center Logo";
+  // backgroundLogo.className = "center-background-logo floating";
+  // scoreboard.appendChild(backgroundLogo);
   
   /* --------------------------------
      BUILD TEAM ROWS
